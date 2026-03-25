@@ -2,7 +2,6 @@ const mongoose = require("mongoose");
 
 const eventSchema = new mongoose.Schema(
   {
-    session_id: { type: String, required: true }, // Added session tracking
     event_id: String,
     timestamp: Date,
     camera_id: String,
