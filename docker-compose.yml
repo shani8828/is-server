@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  backend:
+    build: .
+    container_name: is_server_backend
+    ports:
+      - "5010:5010"
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      - PORT=5010
+      - FRONTEND_URL=http://localhost:5177
